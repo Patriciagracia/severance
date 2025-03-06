@@ -1,12 +1,49 @@
-# React + Vite
+# Severance - Macrodata Refinement
+Hi, kids. What's for dinner? 👋🏻
+This project recreates the Macrodata Refinement software from Severance, the Apple TV+ series, simulating the eerie and mysterious data-sorting experience seen in the show.
+## Features
+- Interactive UI inspired by the Macrodata Refinement software.
+- React-based architecture for a smooth and responsive experience.
+- Styled using Bootstrap for a clean and structured layout.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Technologies Used
+- **React**: Frontend framework for building the user interface.
+- **Vite**: Lightning-fast build tool for modern web projects.
+- **Bootstrap**: Provides styling for the UI.
 
-Currently, two official plugins are available:
+## Prerequisites
+Ensure you have the following installed before running the project:
+- **Node.js** (version 18.x or higher is recommended)
+- **npm** (Node Package Manager)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+Follow these steps to set up and run the project locally:
 
-## Expanding the ESLint configuration
+### Clone the Repository
+```sh
+gh repo clone Patriciagracia/severance
+```
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Navigate to the Project Directory
+```sh
+cd severance
+```
+
+### Install Dependencies
+```sh
+npm install
+```
+
+### Run the Development Server
+```sh
+npm run dev
+```
+
+### Access the Application
+Open your browser and navigate to [http://localhost:5173](http://localhost:5173) to experience the Macrodata Refinement interface.
+
+## Notes
+- The project uses **Vite** as the build tool.
+- Ensure you have an active internet connection during the first run to fetch dependencies.
+- See the live demo here: [**[Macrodata Refinement App]**
+](https://severance-nine.vercel.app/)
