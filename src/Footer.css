@@ -1,0 +1,39 @@
+.footer-container {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 10px 0;
+}
+
+.progress,
+.number-box {
+  width: 80%;
+  height: 30px;
+  border: 2px solid var(--font);
+  margin: 10px auto;
+  border-radius: 0;
+  font-size: 1.2rem;
+  margin: 5px auto;
+}
+
+.progress {
+  background-color: var(--primary-color);
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--font);
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-hr {
+  border: none;
+  border-top: 1px solid var(--font);
+  background-color: var(--primary-color);
+}
+
+.code {
+  font-size: 1rem;
+}

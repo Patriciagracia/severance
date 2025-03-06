@@ -1,0 +1,54 @@
+:root {
+  --primary-color: #0d2039;
+  --font: #a3dfef;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--font);
+  margin: 0;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: "Share Tech Mono", monospace;
+  font-size: 1.7rem;
+  cursor: url("/cursor.png") 16 16, auto;
+}
+
+hr {
+  opacity: 1;
+  height: 6px;
+  border-top: 3px solid var(--font);
+  border-bottom: 3px solid var(--font);
+  width: 100%;
+}
+
+@media (max-width: 576px) {
+  body {
+    max-width: 50%;
+    overflow-x: hidden;
+  }
+}
+
+.retro-monitor {
+  position: relative;
+  width: 100vw;
+}
+
+.retro-monitor::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 0.9px,
+    rgba(163, 223, 239, 0.1) 1px,
+    transparent 1.1px
+  );
+  pointer-events: none;
+  filter: blur(0.2px);
+}

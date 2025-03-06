@@ -1,0 +1,73 @@
+.scary-numbers {
+  display: grid;
+  grid-template-rows: repeat(30, 1fr);
+  grid-template-columns: repeat(30, 1fr);
+  width: 100vw;
+  overflow-y: auto;
+  z-index: 1;
+}
+
+.scary-number-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding: 10px;
+  outline: 20px solid transparent;
+}
+
+.scary-number {
+  font-size: 2.1rem;
+  transition: transform 0.7s ease-in-out, text-shadow 0.7s ease-in-out;
+}
+
+.scary-number-container {
+  transition: transform 0.7s ease-in-out;
+}
+
+.scary-number-container:hover {
+  transform: scale(2.3);
+}
+
+.scary-number-container.hovered .scary-number {
+  transform: scale(2.3);
+  text-shadow: 0 0 5px #fff;
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes moveHorizontally {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.vertical-animation {
+  animation: moveUpDown 4s ease-in-out infinite;
+}
+.horizontal-animation {
+  animation: moveHorizontally 4s ease-in-out infinite;
+}
+
+@media (max-width: 576px) {
+  .scary-numbers {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+}
