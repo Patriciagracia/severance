@@ -1,6 +1,7 @@
 # Severance - Macrodata Refinement
 Hi, kids. What's for dinner? 👋🏻
-This project recreates the Macrodata Refinement software from Severance, the Apple TV+ series, simulating the eerie and mysterious data-sorting experience seen in the show.
+This project recreates the Macrodata Refinement software from Severance, the Apple TV+ series, simulating the eerie and mysterious data-sorting experience seen in the show. I built it just for fun, and there's room for improvement—it would be interesting to add interactions to engage the user and to fix the number animations, which are currently hardcoded.
+
 ## Features
 - Interactive UI inspired by the Macrodata Refinement software.
 - React-based architecture for a smooth and responsive experience.
