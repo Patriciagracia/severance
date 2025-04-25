@@ -14,11 +14,13 @@ export default function ScaryNumbers() {
   }, []);
 
   const generateNumbers = () => {
-    const newNumbers = Array.from({ length: totalNumbers }, () =>
-      Math.floor(Math.random() * 10)
-    );
+    const newNumbers = Array.from({ length: totalNumbers }, () => ({
+      value: Math.floor(Math.random() * 10),
+      animation: Math.random() > 0.5 ? "vertical" : "horizontal",
+    }));
     setNumbers(newNumbers);
   };
+
   const getAdjacentIndexes = (index) => {
     return [
       index,
@@ -33,33 +35,29 @@ export default function ScaryNumbers() {
     ].filter((i) => i >= 0 && i < totalNumbers);
   };
 
-  const verticalAnimation = (number) => {
-    return [3, 4, 5, 7, 9].includes(number);
-  };
-
-  const horizontalAnimation = (number) => {
-    return [0, 1, 2, 6, 8].includes(number);
-  };
+  const verticalAnimation = (numberObj) => numberObj.animation === "vertical";
+  const horizontalAnimation = (numberObj) =>
+    numberObj.animation === "horizontal";
 
   return (
     <div>
       <div className="scary-numbers mt-4">
-        {numbers.map((number, index) => (
+        {numbers.map((numberObj, index) => (
           <div
             key={index}
             className={`scary-number-container 
-            ${
-              hoveredIndex !== null &&
-              getAdjacentIndexes(hoveredIndex).includes(index)
-                ? "hovered"
-                : ""
-            } 
-            ${verticalAnimation(number) ? "vertical-animation" : ""} 
-            ${horizontalAnimation(number) ? "horizontal-animation" : ""}`}
+      ${
+        hoveredIndex !== null &&
+        getAdjacentIndexes(hoveredIndex).includes(index)
+          ? "hovered"
+          : ""
+      } 
+      ${verticalAnimation(numberObj) ? "vertical-animation" : ""} 
+      ${horizontalAnimation(numberObj) ? "horizontal-animation" : ""}`}
             onMouseEnter={() => setHoveredIndex(index)}
             onMouseLeave={() => setHoveredIndex(null)}
           >
-            <p className="scary-number">{number}</p>
+            <p className="scary-number">{numberObj.value}</p>
           </div>
         ))}
       </div>
