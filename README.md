@@ -1,5 +1,6 @@
 # Severance - Macrodata Refinement
 
+
 Hi, kids. What's for dinner? 👋🏻
 This project recreates the Macrodata Refinement software from Severance, the Apple TV+ series, simulating the eerie and mysterious data-sorting experience seen in the show. I built it just for fun, and there's room for improvement—it would be interesting to add interactions to engage the user.
 
@@ -33,7 +34,6 @@ gh repo clone Patriciagracia/severance
 ```
 
 ### Navigate to the Project Directory
-
 ```sh
 cd severance
 ```
@@ -58,5 +58,8 @@ Open your browser and navigate to [http://localhost:5173](http://localhost:5173)
 
 - The project uses **Vite** as the build tool.
 - Ensure you have an active internet connection during the first run to fetch dependencies.
-- See the live demo here: [**[Macrodata Refinement App]**
-  ](https://severance-nine.vercel.app/)
+- See the live demo here: **[Macrodata Refinement App]**
+  (https://severance-nine.vercel.app/)
+
+
+
